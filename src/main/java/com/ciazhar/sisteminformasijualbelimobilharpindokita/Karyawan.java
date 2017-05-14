@@ -16,8 +16,8 @@ public class Karyawan extends Manusia{
 
     public void editKaryawan(String idKaryawan, int labaKaryawan, String nama, String jenisKelamin, String tipe) {
         editManusia(nama, jenisKelamin, tipe);
-        this.idKaryawan = idKaryawan;
-        this.labaKaryawan = labaKaryawan;
+        setIdKaryawan(idKaryawan);
+        setLabaKaryawan(labaKaryawan);
     }
     
     public void detailKaryawan(){

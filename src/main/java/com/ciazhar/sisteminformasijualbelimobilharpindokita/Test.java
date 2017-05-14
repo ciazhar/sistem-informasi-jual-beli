@@ -5,11 +5,11 @@ public class Test {
         Karyawan ana = new Karyawan("k001",0, "Ana", "Perempuan");
         ana.detailKaryawan();
         
-        Pembeli hermawan = new PembeliIndividu("p001","14045","Semarang","Hermawan", "Laki Laki");
-        hermawan.detailPembeli();
+        PembeliIndividu hermawan = new PembeliIndividu("p001","14045","Semarang","Hermawan", "Laki Laki");
+        hermawan.detailPembeliIndividu();
         
-        Pembeli hafidz = new PembeliBorongan("p002","14022","Kendal","Hafidz", "Laki Laki");
-        hafidz.detailPembeli();
+        PembeliBorongan hafidz = new PembeliBorongan("DOSCOM","p002","14022","Kendal","Hafidz", "Laki Laki");
+        hafidz.detailPembeliBorongan();
         
     }
 }

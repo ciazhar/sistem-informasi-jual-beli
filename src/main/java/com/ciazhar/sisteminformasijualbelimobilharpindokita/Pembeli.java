@@ -18,16 +18,15 @@ public class Pembeli extends Manusia{
 
     public void editPembeli(String nama, String jenisKelamin, String tipe, String idPembeli, String nomorTeleponPembeli, String tipePembeli, String alamatPembeli) {
         editManusia(nama, jenisKelamin, tipe);
-        this.idPembeli = idPembeli;
-        this.nomorTeleponPembeli = nomorTeleponPembeli;
-        this.alamatPembeli = alamatPembeli;
+        setIdPembeli(idPembeli);
+        setNomorTeleponPembeli(nomorTeleponPembeli);
+        setAlamatPembeli(alamatPembeli);
     }
     
     public void detailPembeli(){
         detailManusia();
         System.out.println("Nomor Telepon Pembeli   : "+getNomorTeleponPembeli());
         System.out.println("Alamat Pembeli          : "+getAlamatPembeli());
-        System.out.println("");
     }
 
     public String getIdPembeli() {
