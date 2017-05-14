@@ -5,8 +5,10 @@ public class MobilMinibus extends Mobil{
     public MobilMinibus() {
     }
 
-    public MobilMinibus(String namaMobil, int hargaMobil) {
-        super(namaMobil, hargaMobil, "Minibus");
+    public MobilMinibus(String namaMobil, int hargaMobil, int stokMobil) {
+        super(namaMobil, hargaMobil, "Minibus", stokMobil);
     }
+
+   
     
 }

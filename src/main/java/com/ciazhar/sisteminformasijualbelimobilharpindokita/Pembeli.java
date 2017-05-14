@@ -28,6 +28,11 @@ public class Pembeli extends Manusia{
         System.out.println("Nomor Telepon Pembeli   : "+getNomorTeleponPembeli());
         System.out.println("Alamat Pembeli          : "+getAlamatPembeli());
     }
+    
+    public void beliMobil(Mobil mobil, int jumlah){
+        int stokUpdated = mobil.getStokMobil() - jumlah;
+        mobil.setStokMobil(stokUpdated);
+    }
 
     public String getIdPembeli() {
         return idPembeli;
