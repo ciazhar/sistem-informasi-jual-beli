@@ -26,11 +26,8 @@ public class Penjualan {
     }
 
     
-//    int i =0;
     public void tambahTransaksi(Penjualan penjualan) {
-        daftarTransaksi.addAll(daftarTransaksi);
-//        System.out.println("COBA"+daftarTransaksi.get(i).pembeli.getNama());
-//        i++;
+        this.daftarTransaksi.add(penjualan);
     }
     
     public List<Penjualan> getDaftarTransaksi() {
