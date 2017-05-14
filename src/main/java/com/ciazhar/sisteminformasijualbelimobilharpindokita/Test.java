@@ -1,6 +1,7 @@
 package com.ciazhar.sisteminformasijualbelimobilharpindokita;
 
 public class Test {
+        
     public static void main (String [] args){
         
         ///Karyawan
@@ -31,8 +32,18 @@ public class Test {
         ana.setHargaMobil(corola, 10000);
         corola.detailMobil();
         
+        Penjualan penjualan = new Penjualan();
         System.out.println("Beli Mobil");
-        hermawan.beliMobil(corola, 1);
+        hermawan.beliMobil(corola, 1, ana, penjualan);
         corola.detailMobil();
+        ana.detailKaryawan();
+        
+        System.out.println("Beli Mobil 2");
+        hafidz.beliMobil(brt, 10, ana, penjualan);
+        brt.detailMobil();
+        ana.detailKaryawan();
+        
+        System.out.println("Cek List Pembelian");
+        penjualan.listTransaksi();
     }
 }

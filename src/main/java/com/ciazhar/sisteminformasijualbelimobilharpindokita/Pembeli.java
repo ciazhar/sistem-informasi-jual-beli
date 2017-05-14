@@ -1,5 +1,8 @@
 package com.ciazhar.sisteminformasijualbelimobilharpindokita;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pembeli extends Manusia{
     private String idPembeli;
     private String nomorTeleponPembeli;
@@ -29,9 +32,21 @@ public class Pembeli extends Manusia{
         System.out.println("Alamat Pembeli          : "+getAlamatPembeli());
     }
     
-    public void beliMobil(Mobil mobil, int jumlah){
-        int stokUpdated = mobil.getStokMobil() - jumlah;
-        mobil.setStokMobil(stokUpdated);
+    public void beliMobil(Mobil mobil, int jumlah, Karyawan karyawan, Penjualan penjualan){
+        int stokMobilUpdated = mobil.getStokMobil() - jumlah;
+        mobil.setStokMobil(stokMobilUpdated);
+        
+        int labaKaryawanUpdated = mobil.getHargaMobil() *jumlah / 10;
+        karyawan.setLabaKaryawan(labaKaryawanUpdated);
+        
+        penjualan.setKaryawan(karyawan);
+        penjualan.setMobil(mobil);
+        penjualan.setPembeli(this);
+//        penjualan.tambahTransaksi(penjualan);
+        
+        List<Penjualan> penjualans = new ArrayList<>();
+        penjualans.add(penjualan);
+        penjualan.setDaftarTransaksi(penjualans);
     }
 
     public String getIdPembeli() {
