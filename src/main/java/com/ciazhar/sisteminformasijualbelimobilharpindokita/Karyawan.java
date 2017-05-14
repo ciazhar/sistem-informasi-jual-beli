@@ -25,6 +25,10 @@ public class Karyawan extends Manusia{
         System.out.println("Laba                    : "+labaKaryawan);
         System.out.println("");
     }
+    
+    public void setHargaMobil(Mobil mobil, int harga){
+        mobil.setHargaMobil(harga);
+    }
 
     public String getIdKaryawan() {
         return idKaryawan;
