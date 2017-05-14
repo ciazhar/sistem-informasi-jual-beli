@@ -8,8 +8,8 @@ public class Karyawan extends Manusia{
         
     }
     
-    Karyawan(String idKaryawan, int labaKaryawan, String nama, String jenisKelamin, String tipe){
-        super(nama,jenisKelamin,tipe);
+    Karyawan(String idKaryawan, int labaKaryawan, String nama, String jenisKelamin){
+        super(nama,jenisKelamin,"Karyawan");
         this.idKaryawan = idKaryawan;   
         this.labaKaryawan = labaKaryawan;
     }

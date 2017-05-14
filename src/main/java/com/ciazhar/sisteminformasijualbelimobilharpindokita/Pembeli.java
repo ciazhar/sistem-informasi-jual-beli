@@ -3,18 +3,16 @@ package com.ciazhar.sisteminformasijualbelimobilharpindokita;
 public class Pembeli extends Manusia{
     private String idPembeli;
     private String nomorTeleponPembeli;
-    private String tipePembeli;
     private String alamatPembeli;
     
     Pembeli(){
         
     }
 
-    public Pembeli(String idPembeli, String nomorTeleponPembeli, String tipePembeli, String alamatPembeli, String nama, String jenisKelamin, String tipe) {
+    public Pembeli(String idPembeli, String nomorTeleponPembeli, String alamatPembeli, String nama, String jenisKelamin, String tipe) {
         super(nama, jenisKelamin, tipe);
         this.idPembeli = idPembeli;
         this.nomorTeleponPembeli = nomorTeleponPembeli;
-        this.tipePembeli = tipePembeli;
         this.alamatPembeli = alamatPembeli;
     }
 
@@ -22,14 +20,12 @@ public class Pembeli extends Manusia{
         editManusia(nama, jenisKelamin, tipe);
         this.idPembeli = idPembeli;
         this.nomorTeleponPembeli = nomorTeleponPembeli;
-        this.tipePembeli = tipePembeli;
         this.alamatPembeli = alamatPembeli;
     }
     
     public void detailPembeli(){
         detailManusia();
         System.out.println("Nomor Telepon Pembeli   : "+getNomorTeleponPembeli());
-        System.out.println("Tipe Pembeli            : "+getTipePembeli());
         System.out.println("Alamat Pembeli          : "+getAlamatPembeli());
         System.out.println("");
     }
@@ -50,14 +46,7 @@ public class Pembeli extends Manusia{
         this.nomorTeleponPembeli = nomorTeleponPembeli;
     }
 
-    public String getTipePembeli() {
-        return tipePembeli;
-    }
-
-    public void setTipePembeli(String tipePembeli) {
-        this.tipePembeli = tipePembeli;
-    }
-
+    
     public String getAlamatPembeli() {
         return alamatPembeli;
     }
