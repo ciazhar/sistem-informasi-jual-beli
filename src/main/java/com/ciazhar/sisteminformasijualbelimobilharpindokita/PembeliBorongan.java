@@ -8,12 +8,15 @@ public class PembeliBorongan extends Pembeli{
     }
 
     
-    public PembeliBorongan(String namaInstansi, String idPembeli, String nomorTeleponPembeli, String alamatPembeli, String nama, String jenisKelamin) {
+    public PembeliBorongan(String namaInstansi, String idPembeli, String nomorTeleponPembeli, 
+                           String alamatPembeli, String nama, String jenisKelamin) {
         super(idPembeli, nomorTeleponPembeli, alamatPembeli, nama, jenisKelamin, "Pembeli Borongan");
         this.namaInstansi = namaInstansi;
     }
     
-    public void editPembeliBorongan(String namaInstansi, String nama, String jenisKelamin, String tipe, String idPembeli, String nomorTeleponPembeli, String tipePembeli, String alamatPembeli) {
+    public void editPembeliBorongan(String namaInstansi, String nama, String jenisKelamin, String tipe, 
+                                    String idPembeli, String nomorTeleponPembeli, String tipePembeli, 
+                                    String alamatPembeli) {
         editPembeli(nama, jenisKelamin, tipe, idPembeli, nomorTeleponPembeli, tipePembeli, alamatPembeli);
         setNamaInstansi(namaInstansi);
     }

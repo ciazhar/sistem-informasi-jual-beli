@@ -12,14 +12,16 @@ public class Pembeli extends Manusia{
         
     }
 
-    public Pembeli(String idPembeli, String nomorTeleponPembeli, String alamatPembeli, String nama, String jenisKelamin, String tipe) {
+    public Pembeli(String idPembeli, String nomorTeleponPembeli, String alamatPembeli, 
+                   String nama, String jenisKelamin, String tipe) {
         super(nama, jenisKelamin, tipe);
         this.idPembeli = idPembeli;
         this.nomorTeleponPembeli = nomorTeleponPembeli;
         this.alamatPembeli = alamatPembeli;
     }
 
-    public void editPembeli(String nama, String jenisKelamin, String tipe, String idPembeli, String nomorTeleponPembeli, String tipePembeli, String alamatPembeli) {
+    public void editPembeli(String nama, String jenisKelamin, String tipe, String idPembeli, 
+                            String nomorTeleponPembeli, String tipePembeli, String alamatPembeli) {
         editManusia(nama, jenisKelamin, tipe);
         setIdPembeli(idPembeli);
         setNomorTeleponPembeli(nomorTeleponPembeli);
@@ -32,21 +34,23 @@ public class Pembeli extends Manusia{
         System.out.println("Alamat Pembeli          : "+getAlamatPembeli());
     }
     
-    public void beliMobil(Mobil mobil, int jumlah, Karyawan karyawan, Penjualan penjualan){
+    
+    
+    public void beliMobil(Mobil mobil, int jumlah, Karyawan karyawan, DetailPenjualan detailPenjualan){
+        ///stok
         int stokMobilUpdated = mobil.getStokMobil() - jumlah;
         mobil.setStokMobil(stokMobilUpdated);
         
+        ///laba
         int labaKaryawanUpdated = mobil.getHargaMobil() *jumlah / 10;
         karyawan.setLabaKaryawan(labaKaryawanUpdated);
         
+        ///update transaksi
+        Penjualan penjualan = new Penjualan();
         penjualan.setKaryawan(karyawan);
         penjualan.setMobil(mobil);
         penjualan.setPembeli(this);
-//        penjualan.tambahTransaksi(penjualan);
-        
-        List<Penjualan> penjualans = new ArrayList<>();
-        penjualans.add(penjualan);
-        penjualan.setDaftarTransaksi(penjualans);
+        detailPenjualan.setDaftarTransaksi(penjualan);
     }
 
     public String getIdPembeli() {
@@ -64,7 +68,7 @@ public class Pembeli extends Manusia{
     public void setNomorTeleponPembeli(String nomorTeleponPembeli) {
         this.nomorTeleponPembeli = nomorTeleponPembeli;
     }
-
+    
     
     public String getAlamatPembeli() {
         return alamatPembeli;

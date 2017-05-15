@@ -8,7 +8,6 @@ public class Penjualan {
     private Pembeli pembeli;
     private Mobil mobil;
     
-    public List<Penjualan> daftarTransaksi = new ArrayList();    
     
 
     public Penjualan() {
@@ -21,31 +20,7 @@ public class Penjualan {
         this.mobil = mobil;
     }
 
-    public void setDaftarTransaksi(List<Penjualan> daftarTransaksi) {
-        this.daftarTransaksi.addAll(daftarTransaksi);
-    }
-
     
-    public void tambahTransaksi(Penjualan penjualan) {
-        this.daftarTransaksi.add(penjualan);
-    }
-    
-    public List<Penjualan> getDaftarTransaksi() {
-        return daftarTransaksi;
-    }
-    
-    
-    public void listTransaksi(){
-        Penjualan penjualan = new Penjualan();
-        for(int i=0;i<daftarTransaksi.size();i++){
-            penjualan = daftarTransaksi.get(i);
-            System.out.println("Transaksi ke : "+i);
-            System.out.println("Nama Karyawan               : "+penjualan.getKaryawan().getNama());
-            System.out.println("Nama Pembeli                : "+penjualan.getPembeli().getNama());
-            System.out.println("Nama Mobil                  : "+penjualan.getMobil().getNamaMobil());
-        }
-    }
-
     public Karyawan getKaryawan() {
         return karyawan;
     }

@@ -1,7 +1,5 @@
 package com.ciazhar.sisteminformasijualbelimobilharpindokita;
 
-import java.util.List;
-
 public class Karyawan extends Manusia{
     private String idKaryawan;
     private int labaKaryawan;
@@ -16,7 +14,8 @@ public class Karyawan extends Manusia{
         this.labaKaryawan = labaKaryawan;
     }
 
-    public void editKaryawan(String idKaryawan, int labaKaryawan, String nama, String jenisKelamin, String tipe) {
+    public void editKaryawan(String idKaryawan, int labaKaryawan, String nama, 
+                             String jenisKelamin, String tipe) {
         editManusia(nama, jenisKelamin, tipe);
         setIdKaryawan(idKaryawan);
         setLabaKaryawan(labaKaryawan);

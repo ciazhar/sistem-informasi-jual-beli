@@ -32,18 +32,21 @@ public class Test {
         ana.setHargaMobil(corola, 10000);
         corola.detailMobil();
         
-        Penjualan penjualan = new Penjualan();
-        System.out.println("Beli Mobil");
-        hermawan.beliMobil(corola, 1, ana, penjualan);
+        DetailPenjualan transaksi = new DetailPenjualan();
+        
+        System.out.println("Beli Mobil 1");
+        hermawan.beliMobil(corola, 1, ana,transaksi);
         corola.detailMobil();
         ana.detailKaryawan();
         
         System.out.println("Beli Mobil 2");
-        hafidz.beliMobil(brt, 10, ana, penjualan);
+        hafidz.beliMobil(brt, 10, ana, transaksi);
         brt.detailMobil();
         ana.detailKaryawan();
         
         System.out.println("Cek List Pembelian");
-        penjualan.listTransaksi();
+        transaksi.listTransaksi();
+        
+        
     }
 }
